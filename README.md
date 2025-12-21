@@ -137,11 +137,11 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 ：目標臉孔的圖片路徑。
 
-+ /content/woman.mp4
++ `/content/woman.mp4`
 
 ：原始影片的路徑。
 
-+ /content/face_restored_video3.mp4
++ `/content/face_restored_video3.mp4`
 
 ：生成影片的路徑。
 
@@ -193,9 +193,10 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 # **步驟一：開啟Google Colab並連接GPU**
 
-1. 在瀏覽器中輸入
-colab.research.google.com
-，開啟Google Colab。
+1. 在瀏覽器中輸入下方網址，開啟Google Colab。
+
+`colab.research.google.com`
+
 
 2. 點擊「新增筆記本」，創建一個新的Jupyter Notebook。
 
@@ -210,9 +211,9 @@ colab.research.google.com
 
 1. 在Notebook中輸入以下程式碼，並執行：
 
-!git clone https://github.com/Furkankozukara/roop
+`!git clone https://github.com/Furkankozukara/roop
 %cd roop
-!pip install -r requirements.txt
+!pip install -r requirements.txt`
 
 2. 等待程式碼執行完成，這可能需要幾分鐘時間。
 
@@ -233,7 +234,8 @@ colab.research.google.com
 
 + 將素材上傳到
 
-/content
+`/content`
+
 目錄下，方便後續程式碼引用。
 
 + 確保檔案名稱和路徑正確無誤。
@@ -241,18 +243,19 @@ colab.research.google.com
 # **步驟四：執行換臉程式碼**
 
 1. 在Notebook中輸入以下程式碼，並修改其中的路徑：
-!python run.py -i "/content/peakpx.jpg" -t "/content/woman.mp4" -o "face_restored_video3.mp4"
+
+`!python run.py -i "/content/peakpx.jpg" -t "/content/woman.mp4" -o "face_restored_video3.mp4"`
 
 2. 將
-/content/peakpx.jpg
+`/content/peakpx.jpg`
 替換成目標臉孔的圖片路徑。
 
 3. 將
-/content/woman.mp4
+`/content/woman.mp4`
 替換成原始影片的路徑。
 
 4. 將
-/content/face_restored_video3.mp4
+`/content/face_restored_video3.mp4`
 替換成生成影片的路徑。
 
 5. 執行程式碼，開始AI換臉。
@@ -269,10 +272,10 @@ colab.research.google.com
 
 2. 點擊Colab左側的「檔案」圖示，開啟檔案管理員。
 找到生成影片，通常位於
-/content
+`/content`
 目錄下，檔案名稱為你在程式碼中設定的
-face_restored_video3.mp4
-。
+`face_restored_video3.mp4`
+
 
 3. 點擊生成影片，選擇「下載」，將影片儲存到本地電腦。
 
@@ -285,7 +288,7 @@ face_restored_video3.mp4
 ROOP 是一個**完全免費**且開源的工具，任何人都可以免費下載、使用及修改。由於是開源專案，社群會不斷進行維護及更新，使用者可以從GitHub 頁面獲取最新的版本。
 
 # **ROOP的優缺點分析**
-👍 **Pros**
+<👍 **Pros**
 
 + 使用者友善的介面，操作簡單直觀
 
@@ -295,9 +298,9 @@ ROOP 是一個**完全免費**且開源的工具，任何人都可以免費下�
 
 + 完全免費使用，無需支付任何費用
 
-開源專案，可自由修改和客製化
+開源專案，可自由修改和客製化`>
 
-👎 **Cons**
+<👎 **Cons**
 
 + 換臉效果可能不夠完美，有時會出現瑕疵
 
@@ -305,7 +308,7 @@ ROOP 是一個**完全免費**且開源的工具，任何人都可以免費下�
 
 + 部分進階功能需要具備一定的程式設計基礎才能使用
 
-+ 可能存在倫理爭議，需要謹慎使用
++ 可能存在倫理爭議，需要謹慎使用>
 
 # **ROOP的核心功能**
 # **主要功能**
