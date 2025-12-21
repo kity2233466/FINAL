@@ -113,7 +113,7 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 1. **開啟Google Colab：** 在瀏覽器中輸入
 
-colab.research.google.com
+`colab.research.google.com`
 
 ，開啟Google Colab。
 
