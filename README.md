@@ -123,16 +123,17 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 4. **安裝ROOP：** 在Notebook中輸入以下程式碼，並執行：
 
-!git clone https://github.com/Furkankozukara/roop
+`!git clone https://github.com/Furkankozukara/roop
 %cd roop
-!pip install -r requirements.txt
+!pip install -r requirements.txt`
 
 5. **上傳影片和圖片：** 將原始影片和目標臉孔的圖片上傳到Colab。
 
 6. **執行換臉程式碼：** 在Notebook中輸入以下程式碼，並修改其中的路徑：
 
-·!python run.py -i "/content/peakpx.jpg" -t "/content/woman.mp4" -o "face_restored_video3.mp4"
-/content/peakpx.jpg
+`!python run.py -i "/content/peakpx.jpg" -t "/content/woman.mp4" -o "face_restored_video3.mp4"`
+
++ `/content/peakpx.jpg`
 
 ：目標臉孔的圖片路徑。
 
