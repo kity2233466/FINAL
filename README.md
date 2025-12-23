@@ -128,24 +128,51 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 <img width="787" height="125" alt="image" src="https://github.com/user-attachments/assets/50e907cc-a544-4cca-9830-0cdcd27602dc" />
 
-5. **修正版本:**因為roop在2023年開始停止維護更新，所以與現在的google cloab有版本不符問題，所以我們要修正roop的版本，請輸入以下代碼
+5. 這時代碼會跑出很多紅字，最後會出現下面的畫面，但不用緊張，按「**是**」
+
+<img width="698" height="216" alt="image" src="https://github.com/user-attachments/assets/514043ba-de0d-4963-8b95-44a5941770dc" />
+
+
+6. **修正版本:**因為roop在2023年開始停止維護更新，所以與現在的google cloab有版本不符問題，所以我們要修正roop的版本，請輸入以下代碼，並執行
 
 `!curl -s https://raw.githubusercontent.com/kity2233466/roop-colab-fix/main/fix_roop.py | python`
 
-6. **上傳影片和圖片：** 將原始影片和目標臉孔的圖片上傳到Colab，並且修改圖片檔名為`**face.jpg**`;影片檔名為`**video.mp4**`。
+會顯示這樣
+
+<img width="1101" height="182" alt="image" src="https://github.com/user-attachments/assets/fce0f940-68d6-40d2-9f3a-81e1883c12f1" />
+
+
+7. **上傳影片和圖片：** 將原始影片和目標臉孔的圖片上傳到Colab，並且修改圖片檔名為`face.jpg`;影片檔名為`video.mp4`。
+
++ 先點選檔案，在畫面左方
+
+![1766501665470](https://github.com/user-attachments/assets/68ba4d2d-6c5e-4e4d-a38e-827e45aa28df)
+
++ 然後在空白處點擊右鍵，按上傳。會出現第二張圖的畫面，按「確定」
+
+<img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/326101b1-220f-4e63-ad73-65716268e597" />
+
+<img width="1846" height="1010" alt="image" src="https://github.com/user-attachments/assets/c0512096-1ef0-4871-8da7-82bf035200d2" />
+
++ 將檔案更改名稱，修改圖片檔名為`face.jpg`;影片檔名為`video.mp4`。
+
+<img width="1906" height="1052" alt="image" src="https://github.com/user-attachments/assets/e9005346-f313-4672-a983-a73905ca4494" />
+
+
+8. **在執行前確認檔名是否一致**
 
 <img width="296" height="52" alt="image" src="https://github.com/user-attachments/assets/7aacfdfb-3af8-4f69-8928-3a049749cbd2" />
-
 <img width="226" height="39" alt="image" src="https://github.com/user-attachments/assets/efbc9025-8e1f-4d2e-ba05-e2329c1976cf" />
 
-
-7. **在執行前確認檔名是否一致**
-
-8. **執行換臉程式碼：** 在Notebook中輸入以下程式碼：
+9. **執行換臉程式碼：** 在Notebook中輸入以下程式碼：
 
 `!python run.py --source /content/face.jpg --target /content/video.mp4 --output /content/result.mp4 --execution-provider cuda --frame-processor face_swapper"`
 
-7. **·下載生成影片：** 執行程式碼後，ROOP會自動進行AI換臉。完成後，檔案會是result.mp4你可以點擊左側的「檔案」圖示，在roop檔案內找到生成影片，並下載到本地。
+10. **·下載生成影片：** 執行程式碼後，ROOP會自動進行AI換臉。完成後，可以點擊左側的「檔案」圖示，找到「result.mp4」這個檔案並下載到本地。
+
+![1766502631719](https://github.com/user-attachments/assets/895aa2e3-5c1b-4b8e-acd8-14ec44ad7d73)
+
++ 跟改檔名一樣，同樣按右鍵即可下載檔案  
 
 透過以上步驟，你就可以在Google Colab上使用ROOP，輕鬆製作Deepfake影片。 請務必注意倫理問題。
 
@@ -159,8 +186,6 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 影片處理完成後，可以在檔案管理員中找到換臉後的影片，點擊「**下載**」，儲存到本地電腦中。
 
-
-3. 點擊生成影片，選擇「下載」，將影片儲存到本地電腦。
 
 ## **恭喜你，成功製作了Deepfake影片！**
 
@@ -224,4 +249,10 @@ ROOP的主要功能包括：
 + 教育示範：用於教學示範，例如模擬歷史人物演講等。
 
 + 社群媒體互動：製作有趣的換臉短片，增加社交互動。
+
+#　**實際換臉成果影片**
+
+https://github.com/user-attachments/assets/316e8767-f4cd-4f9a-b9cf-717f1b36af9a
+
+組員：11315022許華秦、薛妤芸
 
