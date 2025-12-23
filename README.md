@@ -128,9 +128,9 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 <img width="787" height="125" alt="image" src="https://github.com/user-attachments/assets/50e907cc-a544-4cca-9830-0cdcd27602dc" />
 
-5. **修正版本:**因為roop在2023年開始停止維護更新，所以與現在的google cloab有版本不符問題，所以我們要修正roop的版本
+5. **修正版本:**因為roop在2023年開始停止維護更新，所以與現在的google cloab有版本不符問題，所以我們要修正roop的版本，請輸入以下代碼
 
-<img width="938" height="47" alt="image" src="https://github.com/user-attachments/assets/5cbc6c88-b4f0-418f-8aec-6f5b3f531fb7" />
+`!curl -s https://raw.githubusercontent.com/kity2233466/roop-colab-fix/main/fix_roop.py | python`
 
 6. **上傳影片和圖片：** 將原始影片和目標臉孔的圖片上傳到Colab，並且修改圖片檔名為`**face.jpg**`;影片檔名為`**video.mp4**`。
 
@@ -139,9 +139,9 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 <img width="226" height="39" alt="image" src="https://github.com/user-attachments/assets/efbc9025-8e1f-4d2e-ba05-e2329c1976cf" />
 
 
-7.**在執行前確認檔名是否一致**
+7. **在執行前確認檔名是否一致**
 
-8.**執行換臉程式碼：** 在Notebook中輸入以下程式碼：
+8. **執行換臉程式碼：** 在Notebook中輸入以下程式碼：
 
 `!python run.py --source /content/face.jpg --target /content/video.mp4 --output /content/result.mp4 --execution-provider cuda --frame-processor face_swapper"`
 
