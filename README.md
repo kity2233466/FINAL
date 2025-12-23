@@ -36,8 +36,6 @@
 
 AI換臉技術，又稱**Deepfake技術**，是一種利用人工智慧演算法，將影片或圖片中的人臉替換成另一張臉的技術。它利用深度學習模型，分析原始影片或圖片的人臉特徵，然後將目標臉孔無縫整合到原始素材中，產生以假亂真的效果。
 
-<img src="https://github.com/kity2233466/KAKA/blob/main/%E8%BC%AA%E6%AC%A1%E8%A8%AD%E5%AE%9A.jpg">
-
 AI換臉技術的應用範圍非常廣泛，從娛樂產業到教育領域，都能看到它的身影。然而，由於其可能被用於製造不實資訊或惡意內容，因此也引發了許多關於倫理和法律方面的討論。
 
 儘管存在爭議，AI換臉技術的發展速度卻不容小覷。隨著演算法的不斷改進和硬體效能的提升，Deepfake影片的製作門檻也越來越低，使得更多人能夠接觸到這項技術。
@@ -106,10 +104,15 @@ ROOP支援多種作業系統，包括Windows、macOS和Linux。它也提供不�
 
 Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務，讓使用者可以在雲端執行Python程式碼。Colab還提供免費的GPU資源，非常適合用於進行深度學習相關的任務。ROOP可以在Google Colab上運行，讓你無需在本地安裝任何軟體，就能製作Deepfake影片。
 
-<img src="https://github.com/kity2233466/KAKA/blob/main/%E8%BC%AA%E6%AC%A1%E8%A8%AD%E5%AE%9A.jpg">
-
-
 **以下是在Google Colab上使用ROOP的步驟：**
+
+**注意事項：**
+
++ 在執行程式碼之前，請確保已經連接GPU。 
+
++ 修改程式碼中的路徑時，請使用正確的檔案名稱和路徑。
+
++ AI換臉需要一定的時間，請耐心等待。
 
 1. **開啟Google Colab：** 在瀏覽器中輸入
 
@@ -123,37 +126,26 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 4. **安裝ROOP：** 在Notebook中輸入以下程式碼，並執行：
 
-`!git clone https://github.com/Furkankozukara/roop
-%cd roop
-!pip install -r requirements.txt`
+<img width="787" height="125" alt="image" src="https://github.com/user-attachments/assets/50e907cc-a544-4cca-9830-0cdcd27602dc" />
 
-5. **上傳影片和圖片：** 將原始影片和目標臉孔的圖片上傳到Colab。
+5. **修正版本:**因為roop在2023年開始停止維護更新，所以與現在的google cloab有版本不符問題，所以我們要修正roop的版本
 
-6. **執行換臉程式碼：** 在Notebook中輸入以下程式碼，並修改其中的路徑：
+<img width="938" height="47" alt="image" src="https://github.com/user-attachments/assets/5cbc6c88-b4f0-418f-8aec-6f5b3f531fb7" />
 
-`!python run.py -i "/content/peakpx.jpg" -t "/content/woman.mp4" -o "face_restored_video3.mp4"`
+6. **上傳影片和圖片：** 將原始影片和目標臉孔的圖片上傳到Colab，並且修改圖片檔名為`**face.jpg**`;影片檔名為`**video.mp4**`。
 
-+ `/content/peakpx.jpg`
+<img width="296" height="52" alt="image" src="https://github.com/user-attachments/assets/7aacfdfb-3af8-4f69-8928-3a049749cbd2" />
 
-：目標臉孔的圖片路徑。
+<img width="226" height="39" alt="image" src="https://github.com/user-attachments/assets/efbc9025-8e1f-4d2e-ba05-e2329c1976cf" />
 
-+ `/content/woman.mp4`
 
-：原始影片的路徑。
+7.**在執行前確認檔名是否一致**
 
-+ `/content/face_restored_video3.mp4`
+8.**執行換臉程式碼：** 在Notebook中輸入以下程式碼：
 
-：生成影片的路徑。
+`!python run.py --source /content/face.jpg --target /content/video.mp4 --output /content/result.mp4 --execution-provider cuda --frame-processor face_swapper"`
 
-7. **·下載生成影片：** 執行程式碼後，ROOP會自動進行AI換臉。完成後，你可以點擊左側的「檔案」圖示，找到生成影片，並下載到本地。
-
-**注意事項：**
-
-+ 在執行程式碼之前，請確保已經連接GPU。 
-
-+ 修改程式碼中的路徑時，請使用正確的檔案名稱和路徑。
-
-+ AI換臉需要一定的時間，請耐心等待。
+7. **·下載生成影片：** 執行程式碼後，ROOP會自動進行AI換臉。完成後，檔案會是result.mp4你可以點擊左側的「檔案」圖示，在roop檔案內找到生成影片，並下載到本地。
 
 透過以上步驟，你就可以在Google Colab上使用ROOP，輕鬆製作Deepfake影片。 請務必注意倫理問題。
 
@@ -166,115 +158,6 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 確認路徑無誤後，再次點擊「播放鍵」符號，執行換臉程式碼。AI換臉所需的時間，會因為影片長度而有所不同，請耐心等候。
 
 影片處理完成後，可以在檔案管理員中找到換臉後的影片，點擊「**下載**」，儲存到本地電腦中。
-
-# **使用ROOP製作Deepfake影片教學**
-
-## **準備工作**
-
-在開始製作Deepfake影片之前，需要準備以下素材：
-
-+ **原始影片：** 選擇一段包含清晰人臉的影片，影片的畫質和穩定性會影響最終的生成效果。
-
-+ **目標臉孔：** 選擇一張清晰、正面的人臉圖片，圖片的解析度越高，生成效果越好。
-
-+ **Google帳號：** 需要一個Google帳號才能使用Google Colab。
-
-### **素材選擇建議：**
-
-+ **原始影片：** 選擇光線充足、人臉清晰、表情自然的影片。
-
-+ **目標臉孔：** 選擇與原始影片人臉角度相似、表情一致的圖片。
-
-### **素材格式要求：**
-
-+ **原始影片：** 支援MP4、AVI、MOV等常見影片格式。
-
-+ **目標臉孔：** 支援JPG、PNG等常見圖片格式。
-
-# **步驟一：開啟Google Colab並連接GPU**
-
-1. 在瀏覽器中輸入下方網址，開啟Google Colab。
-
-`colab.research.google.com`
-
-
-2. 點擊「新增筆記本」，創建一個新的Jupyter Notebook。
-
-3. 點擊「代碼執行程式」、「變更執行階段類型」，在「硬體加速器」下拉選單中選擇「GPU」。
-
-提示：
-
-如果沒有GPU選項，請檢查你的Google帳號是否符合Colab Pro的資格。
-連接GPU後，Colab會自動分配GPU資源給你。
-
-# **步驟二：安裝ROOP**
-
-1. 在Notebook中輸入以下程式碼，並執行：
-
-`!git clone https://github.com/Furkankozukara/roop
-%cd roop
-!pip install -r requirements.txt`
-
-2. 等待程式碼執行完成，這可能需要幾分鐘時間。
-
-### 提示：
-
-+ 如果遇到任何錯誤，請檢查程式碼是否輸入正確。
-
-+ 如果網路連線不穩定，可能會導致安裝失敗，請重新
-執行程式碼。
-
-# **步驟三：上傳影片和圖片**
-
-1. 點擊Colab左側的「檔案」圖示，開啟檔案管理員。
-
-2. 點擊「上傳」按鈕，將原始影片和目標臉孔的圖片上傳到Colab。
-
-### 提示：
-
-+ 將素材上傳到
-
-`/content`
-
-目錄下，方便後續程式碼引用。
-
-+ 確保檔案名稱和路徑正確無誤。
-
-# **步驟四：執行換臉程式碼**
-
-1. 在Notebook中輸入以下程式碼，並修改其中的路徑：
-
-`!python run.py -i "/content/peakpx.jpg" -t "/content/woman.mp4" -o "face_restored_video3.mp4"`
-
-2. 將
-`/content/peakpx.jpg`
-替換成目標臉孔的圖片路徑。
-
-3. 將
-`/content/woman.mp4`
-替換成原始影片的路徑。
-
-4. 將
-`/content/face_restored_video3.mp4`
-替換成生成影片的路徑。
-
-5. 執行程式碼，開始AI換臉。
-
-### 提示：
-
-+ AI換臉需要一定的時間，請耐心等待。
-
-+ 如果遇到任何錯誤，請檢查程式碼中的路徑是否正確。
-
-# **步驟五：下載生成影片**
-
-1. 等待AI換臉完成，這可能需要幾分鐘到幾小時的時間，取決於影片的長度和複雜度。
-
-2. 點擊Colab左側的「檔案」圖示，開啟檔案管理員。
-找到生成影片，通常位於
-`/content`
-目錄下，檔案名稱為你在程式碼中設定的
-`face_restored_video3.mp4`
 
 
 3. 點擊生成影片，選擇「下載」，將影片儲存到本地電腦。
