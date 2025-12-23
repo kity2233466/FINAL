@@ -268,13 +268,13 @@ https://github.com/user-attachments/assets/d48b7b2c-a0b0-4eb7-886d-4b3847a9730c
 
 https://github.com/user-attachments/assets/316e8767-f4cd-4f9a-b9cf-717f1b36af9a
 
-+ 照片、影片均經過本人同意，但影片結果可能是臉型動作不相像的緣故，所以效果沒有很好
++ 照片、影片均經過本人同意，但影片結果可能是臉型、動作不相像的緣故，所以效果沒有很好
 
 # 總結
 
 + 因為roop版本跟google cloab現在的版本不相容，所以在一開始做的時候一直出現錯誤。
 + 幾乎整個過程一直在試錯，我們依靠ai的幫忙完成修補版本不同的錯誤，儘管如此也花上近3個小時的時間，才完成整個換臉程序。
-+ 補丁內容包刮修正 NumPy 2.x 的相容性錯誤、移除 Colab 伺服器端環境中不需要的 TensorFlow 資源限制代碼，及提供一鍵式部署，已經建立在github上。
++ 補丁內容包刮修正 NumPy 2.x 的相容性錯誤、移除 Colab 伺服器端環境中不需要的 TensorFlow 資源限制代碼，及提供一鍵式部署，已經建立在github上。(https://github.com/kity2233466/roop-colab-fix/blob/main/fix_roop.py)
 
 組員：11315022許華秦、11218109薛妤芸
 
