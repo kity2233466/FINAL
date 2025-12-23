@@ -7,7 +7,7 @@
 
 + [ROOP Deepfake工具詳解](#roop-deepfake工具詳解)
 
-+ [使用ROOP製作Deepfake影片教學](#使用roop製作deepfake影片教學)
++ [在Google Colab上使用ROOP完整教學](#在google-cloab上使用roop完整教學)
 
 + [ROOP價格](#roop價格)
 
@@ -100,7 +100,7 @@ ROOP支援多種作業系統，包括Windows、macOS和Linux。它也提供不�
 
 + **可能存在倫理問題：** 使用ROOP製作Deepfake影片時，需要注意倫理和法律方面的問題。
 
-# **在Google Colab上使用ROOP**
+# **在Google Colab上使用ROOP完整教學**
 
 Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務，讓使用者可以在雲端執行Python程式碼。Colab還提供免費的GPU資源，非常適合用於進行深度學習相關的任務。ROOP可以在Google Colab上運行，讓你無需在本地安裝任何軟體，就能製作Deepfake影片。
 
