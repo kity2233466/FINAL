@@ -146,12 +146,12 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 `print("\n✅ 第一步完成：環境與你的專屬補丁已就緒。")`
 
-代碼如圖
+代碼輸入完如圖
 <img width="1411" height="48" alt="image" src="https://github.com/user-attachments/assets/b55e6a40-323f-406b-9042-63d5d808743c" />
 <img width="1366" height="107" alt="image" src="https://github.com/user-attachments/assets/f6c25df8-5820-426e-96f1-b5faa3431d1f" />
 
 
-+ 會跑出這個畫面
++ 執行後會跑出這個畫面
 
 <img width="1911" height="928" alt="image" src="https://github.com/user-attachments/assets/9180e497-c533-45bd-a850-01565ee548e1" />
 
