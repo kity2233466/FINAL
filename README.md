@@ -183,12 +183,10 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 <img width="1906" height="1052" alt="image" src="https://github.com/user-attachments/assets/e9005346-f313-4672-a983-a73905ca4494" />
 
 
-8. **在執行前確認檔名是否一致**
+9. **在執行前確認檔名是否一致**
 
 <img width="296" height="52" alt="image" src="https://github.com/user-attachments/assets/7aacfdfb-3af8-4f69-8928-3a049749cbd2" />
 <img width="226" height="39" alt="image" src="https://github.com/user-attachments/assets/efbc9025-8e1f-4d2e-ba05-e2329c1976cf" />
-
-9.執行
 
 10. **執行換臉程式碼：** 在Notebook中輸入以下程式碼：
 
