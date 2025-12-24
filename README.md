@@ -130,23 +130,43 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 
 4. **安裝ROOP：** 在Notebook中輸入以下程式碼，並執行：
 
-<img width="787" height="125" alt="image" src="https://github.com/user-attachments/assets/50e907cc-a544-4cca-9830-0cdcd27602dc" />
+<img width="509" height="111" alt="image" src="https://github.com/user-attachments/assets/973da2c1-34eb-452d-be25-c22ce2f16bdb" />
 
-5. 這時代碼會跑出很多紅字，最後會出現下面的畫面，但不用緊張，按「**是**」
+5. 下載補丁，輸入以下代碼並執行
 
-<img width="698" height="216" alt="image" src="https://github.com/user-attachments/assets/514043ba-de0d-4963-8b95-44a5941770dc" />
-
+`!wget -O fix_roop.py https://raw.githubusercontent.com/kity2233466/roop-colab-fix/main/fix_roop.py`
 
 6. **修正版本:**因為roop在2023年開始停止維護更新，所以與現在的google cloab有版本不符問題，所以我們要修正roop的版本，請輸入以下代碼，並執行
 
-`!curl -s https://raw.githubusercontent.com/kity2233466/roop-colab-fix/main/fix_roop.py | python`
+`!pip install -q "numpy<2.0" onnxruntime-gpu==1.17.1 insightface==0.7.3 opencv-python-headless==4.9.0.80 customtkinter tkinterdnd2 opennsfw2`
 
-會顯示這樣
+`!mkdir -p models`
 
-<img width="1101" height="182" alt="image" src="https://github.com/user-attachments/assets/fce0f940-68d6-40d2-9f3a-81e1883c12f1" />
+`!wget -q --show-progress -O models/inswapper_128.onnx "https://huggingface.co/ezioruan/inswapper_128.onnx/resolve/main/inswapper_128.onnx"`#這行指令不必換行
+
+`print("\n✅ 第一步完成：環境與你的專屬補丁已就緒。")`
+
+代碼如圖
+<img width="1411" height="48" alt="image" src="https://github.com/user-attachments/assets/b55e6a40-323f-406b-9042-63d5d808743c" />
+<img width="1366" height="107" alt="image" src="https://github.com/user-attachments/assets/f6c25df8-5820-426e-96f1-b5faa3431d1f" />
 
 
-7. **上傳影片和圖片：** 將原始影片和目標臉孔的圖片上傳到Colab，並且修改圖片檔名為`face.jpg`;影片檔名為`video.mp4`。
++ 會跑出這個畫面
+
+<img width="1911" height="928" alt="image" src="https://github.com/user-attachments/assets/9180e497-c533-45bd-a850-01565ee548e1" />
+
++ 這時候請重新執行工作階段
+
+![1766547430598_0](https://github.com/user-attachments/assets/4e6c641c-2044-4695-a9ba-88d2d6099d9e)
+
+![1766547471525](https://github.com/user-attachments/assets/27375994-e301-4fa0-b4e1-d79a11b08a7c)
+
+7. **補回缺失及執行修復腳本:**
+
+<img width="939" height="445" alt="image" src="https://github.com/user-attachments/assets/30e61f1f-d856-4805-99f7-c8e1b698ca63" />
+
+
+8. **上傳影片和圖片：** 將原始影片和目標臉孔的圖片上傳到Colab，並且修改圖片檔名為`face.jpg`;影片檔名為`video.mp4`。
 
 + 先點選檔案，在畫面左方
 
@@ -168,11 +188,25 @@ Google Colab是一個**免費的雲端平台**，提供Jupyter Notebook的服務
 <img width="296" height="52" alt="image" src="https://github.com/user-attachments/assets/7aacfdfb-3af8-4f69-8928-3a049749cbd2" />
 <img width="226" height="39" alt="image" src="https://github.com/user-attachments/assets/efbc9025-8e1f-4d2e-ba05-e2329c1976cf" />
 
-9. **執行換臉程式碼：** 在Notebook中輸入以下程式碼：
+9.執行
 
-`!python run.py --source /content/face.jpg --target /content/video.mp4 --output /content/result.mp4 --execution-provider cuda --frame-processor face_swapper"`
+10. **執行換臉程式碼：** 在Notebook中輸入以下程式碼：
 
-10. **·下載生成影片：** 執行程式碼後，ROOP會自動進行AI換臉。完成後，可以點擊左側的「檔案」圖示，找到「result.mp4」這個檔案並下載到本地。
+`%cd /content/roop`
+
+`!python run.py \
+    --source /content/face.jpg \
+    --target /content/video.mp4 \
+    --output /content/result.mp4 \
+    --execution-provider cuda \
+    --frame-processor face_swapper`
+
+指令會是這樣
+
+<img width="750" height="295" alt="image" src="https://github.com/user-attachments/assets/d164a112-d761-4565-b585-9b55a0281b73" />
+
+    
+11. **·下載生成影片：** 執行程式碼後，ROOP會自動進行AI換臉。完成後，可以點擊左側的「檔案」圖示，找到「result.mp4」這個檔案並下載到本地。
 
 ![1766502631719](https://github.com/user-attachments/assets/895aa2e3-5c1b-4b8e-acd8-14ec44ad7d73)
 
